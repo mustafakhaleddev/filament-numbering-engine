@@ -1,6 +1,6 @@
 # Filament Numbering Engine
 
-Configurable auto-numbering for any Eloquent model in Filament v5. Supports patterns like `INV-2026-0001`, `PO/{branch}/{sequence}`, per-tenant sequences, fiscal year resets, gap-free mode, and prefix/suffix rules.
+Configurable auto-numbering for any Eloquent model in Filament (v4, v5) . Supports patterns like `INV-2026-0001`, `PO/{branch}/{sequence}`, per-tenant sequences, fiscal year resets, gap-free mode, and prefix/suffix rules.
 
 ## Installation
 
