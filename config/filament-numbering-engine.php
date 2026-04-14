@@ -70,10 +70,15 @@ return [
     | Set tenant_column to match your application's tenant foreign key
     | (e.g. 'company_id', 'team_id', 'organization_id').
     |
+    | Set column_type to match your tenant model's primary key type.
+    | Use 'uuid' for UUID-based models, or 'unsignedBigInteger' for
+    | auto-incrementing integer keys.
+    |
     */
     'multi_tenancy' => [
         'enabled' => false,
         'column' => 'company_id',
+        'column_type' => 'unsignedBigInteger',
     ],
 
     /*

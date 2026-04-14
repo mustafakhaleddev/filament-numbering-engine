@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
 
             if ($tenancyEnabled) {
-                $table->unsignedBigInteger($tenantColumn)->nullable()->index();
+                $tenantColumnType = config('filament-numbering-engine.multi_tenancy.column_type', 'unsignedBigInteger');
+                $table->{$tenantColumnType}($tenantColumn)->nullable()->index();
             }
 
             $table->string('name');

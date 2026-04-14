@@ -157,7 +157,7 @@ it('isolates counters per tenant', function () {
 
         protected $guarded = [];
 
-        public int $company_id = 0;
+        public int|string $company_id = 0;
 
         public function getMorphClass(): string
         {
@@ -172,7 +172,7 @@ it('isolates counters per tenant', function () {
 
         protected $guarded = [];
 
-        public int $company_id = 0;
+        public int|string $company_id = 0;
 
         public function getMorphClass(): string
         {
@@ -222,7 +222,7 @@ it('builds correct scope keys for different reset frequencies', function () {
 
         protected $guarded = [];
 
-        public int $company_id = 0;
+        public int|string $company_id = 0;
 
         public function getMorphClass(): string
         {

@@ -43,7 +43,7 @@ class NumberingSequence extends Model
 
         if (config('filament-numbering-engine.multi_tenancy.enabled', false)) {
             $column = config('filament-numbering-engine.multi_tenancy.column', 'company_id');
-            $query->when($model->{$column} ?? null, fn (Builder $q, int $id) => $q->where($column, $id));
+            $query->when($model->{$column} ?? null, fn (Builder $q, int|string $id) => $q->where($column, $id));
         }
 
         return $query;
